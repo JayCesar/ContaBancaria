@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 class Conta {
 <<Abstract>>
@@ -61,3 +62,4 @@ Conta <|-- ContaCorrente
 Conta <|-- ContaPoupanca
 Conta <.. ContaRepository
 ContaRepository <|.. ContaController
+```
