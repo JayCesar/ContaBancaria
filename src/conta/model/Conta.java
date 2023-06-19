@@ -1,21 +1,27 @@
 package conta.model;
 
-public abstract class Conta {
-	
-	private int numero;
-	private int agencia;
-	private int tipo;
+public abstract class Conta 
+{
 	private String titular;
+	private int numero = 0, agencia, tipo;
 	private float saldo;
 	
-	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
+	public Conta(String titular, int numero, int agencia, int tipo, float saldo) 
+	{
+		this.titular = titular;
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
-		this.titular = titular;
 		this.saldo = saldo;
 	}
-	
+
+	public String getTitular() {
+		return titular;
+	}
+
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
 
 	public int getNumero() {
 		return numero;
@@ -41,14 +47,6 @@ public abstract class Conta {
 		this.tipo = tipo;
 	}
 
-	public String getTitular() {
-		return titular;
-	}
-
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-
 	public float getSaldo() {
 		return saldo;
 	}
@@ -56,23 +54,28 @@ public abstract class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
-
-	public boolean sacar(float valor) {
+	
+	public boolean sacar(float valor) 
+	{ 
 		
-		if (this.getSaldo() < valor) {
-			System.out.println("\n Saldo insuficiente!");
+		if(this.getSaldo() < valor) 
+		{
+			System.out.println("\n saldo Insuficiente!");
 			return false;
 		}
+			
 		this.setSaldo(this.getSaldo() - valor);
 		return true;
 	}
 	
-	public void depositar(float valor) {
-		this.setSaldo(this.getSaldo() + valor);
+	public void depositar(float valor) 
+	{
+		this.setSaldo(this.getSaldo()+ valor);
 	}
 	
-	public void visualizar() {
-		
+	public void print() 
+	{
+
 		String tipo = "";
 		
 		switch(this.tipo) {
@@ -84,14 +87,15 @@ public abstract class Conta {
 		break;
 		}
 		
-		System.out.println("\n\n***********************************************************");
-		System.out.println("Dados da Conta:");
 		System.out.println("***********************************************************");
-		System.out.println("Numero da Conta: " + this.numero);
-		System.out.println("Agência: " + this.agencia);
-		System.out.println("Tipo da Conta: " + tipo);
-		System.out.println("Titular: " + this.titular);
-		System.out.println("Saldo: " + this.saldo);
+		System.out.println("\tDados da Conta:");
+		System.out.println("***********************************************************");
+		System.out.println("\tNumero da Conta: " + this.numero);
+		System.out.println("\tAgência: " + this.agencia);
+		System.out.println("\tTipo da Conta: " + tipo);
+		System.out.println("\tTitular: " + this.titular);
+		System.out.println("\tSaldo: " + this.saldo + "\n");
+
 	}
 	
 	
