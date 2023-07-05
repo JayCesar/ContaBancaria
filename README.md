@@ -109,8 +109,8 @@ ContaRepository <|.. ContaController
 ***
 
 ### 🎯 Como executar o sistema?
-   1) Você pode baixar este repositório e exectuar na sua máquina
-   2) Ou você pode executar sem baixar, basta acessar meu [**Replit:**](https://replit.com/@JayCesar/ContaBancaria?v=1) e clicar em **"Run"**;
+1) Você pode baixar este repositório e executar na sua máquina
+2) Ou você pode executar sem baixar, basta acessar meu [**Replit:**](https://replit.com/@JayCesar/ContaBancaria?v=1) e clicar em **"Run"**;
 
 ***
 
